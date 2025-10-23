@@ -9,7 +9,6 @@ export default function SnippetCreatePage() {
     const code = formData.get("code") as string;
 
     const snippet = await db.snippet.create({ data: { title, code } });
-    console.log("snippet ", snippet);
 
     redirect("/");
   }
